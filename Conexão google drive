@@ -1,0 +1,5 @@
+# importndo os pcotes necessários
+from google.colab import drive
+
+# montando o drive
+drive.mount("/content/gdrive")
