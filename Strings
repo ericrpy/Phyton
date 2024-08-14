@@ -1,0 +1,25 @@
+# verificando o tipo
+type("Eric Rodrigues")
+
+# associando strings à variáveis
+
+nome = 'Eric'
+sobrenome = 'Rodrigues'
+sufixo = 'Jr'
+profissao = 'Jogador'
+
+# imprimir nome completo
+print('Nome completo:')
+print(nome, sobrenome, sufixo)
+
+# imprimir profissão
+print("Sua profissão é ", profissao + ".")
+
+# criando uma variável
+nome = 'Eric'
+
+# ver qual é a primeira letra da variável nome
+nome[0]
+
+# ver qual é a última letra da variável nome
+nome[-1]
