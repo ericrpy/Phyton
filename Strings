@@ -2,7 +2,6 @@
 type("Eric Rodrigues")
 
 # associando strings à variáveis
-
 nome = 'Eric'
 sobrenome = 'Rodrigues'
 sufixo = 'Jr'
@@ -23,3 +22,82 @@ nome[0]
 
 # ver qual é a última letra da variável nome
 nome[-1]
+
+# verificar o tamanho da sequencia de uma variável
+dna = 'ATGCGGACCTAT'
+len(dna)
+
+# separar strings baseado em delimitador
+nomes = 'Eric,Joao,Pedro,Maria'
+nomes.split(',')
+
+# substituição de caracteres
+# criando variável
+valor = "9,50"
+
+# trocando a vírgula por ponto
+float(valor.replace(',', '.'))
+
+# removendo caracteres indesejados
+nome = '         Eric Rodrigues       '
+
+# função strip
+nome.strip()
+
+# removendo o R$
+"R$ 9,50".strip('R$ ')
+"R$ 9,50".strip('R$ ').replace(',', '.')
+float("R$ 9,50".strip('R$ ').replace(',', '.'))
+
+# slicing de variáveis
+nome = 'Eric'
+nome[2:4]
+
+# slicing do começo ao 4
+nome[:4]
+
+# slicing do 2 ao fim
+nome[2:]
+
+# manipulando a variável
+print('Nome Completo: ', nome)
+print('Primeira parte: ', nome[:3])
+print('Segunda parte: ', nome[3:])
+print('Nome feito adicionando Slices: ', nome[:3] + nome[3:])
+
+# step, criando variável
+num = 'aisdinsdksndklnkldnma'
+print(num)
+
+# pegar do 0 ao 8 pulando 2 em 2
+num[0:8:2]
+
+# pegar do 0 ao 8 pulando de 1 em 1
+num[0:8:1]
+
+# slicing da variável num, começando do primeiro caractere, indo até o último, em step 2, ou seja
+# mostra um, pula um
+num[::2]
+
+# para visualizarmos os pares, basta começar da posição 2
+# aqui temos dois `:`, pois indicamos o início, até (:) o final (:) e step 2.
+num[1::2]
+
+# convertendo strings, criando a variável a ser manipulada
+nome = "josé Santos da Silva"
+
+# utilizando capitalize para deixar apenas a primeira letra maiúscula
+nome.capitalize()
+
+# utilizando lower para deixar tudo minúsculo
+nome.lower()
+
+# utilizando upper para deixa tudo maiúsculo
+nome.upper()
+
+# utilizando title para deixar a primeira letra de cada palavra maiúscula
+nome.title()
+
+# utilizando swapcase para inverter o que é minúsculo e maiúsculo
+nome.swapcase()
+
