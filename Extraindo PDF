@@ -1,0 +1,68 @@
+!pip install pdfplumber
+
+# importando os pacotes necessários
+from google.colab import drive
+import pdfplumber
+import os
+
+# montando o drive
+drive.mount('/content/gdrive')
+
+# mudar para diretório com pdfs da semana
+os.chdir("/content/gdrive/MyDrive/Colab Notebooks/PDF")
+
+# checar se estou no diretório correto
+os.getcwd()
+
+# imprimir lista com arquvios no diretório
+arquivos_semana = os.listdir()
+print (arquivos_semana)
+
+# abrir um relatório
+relatorio = pdfplumber.open("/content/gdrive/MyDrive/Colab Notebooks/PDF/20200801.pdf")
+
+# abrir primeira página do relatório
+pagina = relatorio.pages[0]
+
+# extrair o texto da primeira página do primeiro relatório
+texto = pagina.extract_text()
+print(texto)
+
+# \t: tecla tab, espaço entre as palavras
+# \n: a tecla enter, quebra de linha
+# olhe como chega o texto
+texto
+
+# dividindo o texto por linhas
+texto.split("\n")
+
+# vendas sempre aparecem na 4a posição (índice 3)
+texto.split("\n")[3]
+
+# retirando tabulações
+text.split("\n")[3].replace("\t", "")
+
+# queremos o que vem depois do R$, então usaremos o str.split("R$")
+texto.split("\n")[3].split("R$")
+
+# valor em string
+texto.split("\n")[3].split("R$")[1]
+
+# transformando em float
+float(texto.split("\n")[3].split("R$")[1])
+
+# criando um contador
+soma = 0
+
+# criando a função
+for arquivo in arquivos_semana:
+    relatorio = pdfplumber.open(arquivo)
+    pagina = relatorio.pages[0]
+    texto = pagina.extract_text()
+    valor = texto.split("\n")[3].split("R$")[1]
+    valor = float(valor)
+    soma = soma + valor
+    print(arquivo, "--->", valor)
+
+# soma total
+print('Receita dos últimos 5 dias: R$',soma)
