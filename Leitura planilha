@@ -1,0 +1,5 @@
+# importar os pacotes necessários
+# None para trazer todas as abas
+import pandas as pd
+planilha = pd.read_excel("/content/controle_da_empresa.xlsx", None)
+planilha["Vendas"].plot("Data da Venda", "Total de Vendas")
