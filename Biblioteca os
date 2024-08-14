@@ -1,0 +1,11 @@
+# importando uma biblioteca
+import os
+
+# pegar diretório atual
+os.getcwd()
+
+# mudar diretório
+os.chdir("/content/sample_data")
+
+# listar conteúdo de diretório
+os.listdir()
