@@ -36,7 +36,7 @@ texto
 # dividindo o texto por linhas
 texto.split("\n")
 
-# vendas sempre aparecem na 4a posição (índice 3)
+# vendas sempre aparecem na 4a posição/linha (índice 3)
 texto.split("\n")[3]
 
 # retirando tabulações
