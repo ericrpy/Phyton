@@ -40,7 +40,7 @@ texto.split("\n")
 texto.split("\n")[3]
 
 # retirando tabulações
-text.split("\n")[3].replace("\t", "")
+texto.split("\n")[3].replace("\t", "")
 
 # queremos o que vem depois do R$, então usaremos o str.split("R$")
 texto.split("\n")[3].split("R$")
