@@ -41,7 +41,7 @@ float(valor.replace(',', '.'))
 # removendo caracteres indesejados
 nome = '         Eric Rodrigues       '
 
-# função strip
+# função strip, remove campos ou caracteres indesejados
 nome.strip()
 
 # removendo o R$
