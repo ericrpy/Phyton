@@ -1,0 +1,41 @@
+# criando arquivo
+arquivo = "arquivo.txt"
+
+# importando a biblioteca os
+import os
+
+# verificando arquivos do diretório atual
+os.listdir()
+
+# verificando diretório atual
+os.getcwd()
+
+# abrindo arquivo no modo que permite escrita
+file = open(arquivo, "w")
+file.write("Familia Sigmoidal")
+file.close()
+
+# abrindo arquivo para leitura
+file = open(arquivo, "r")
+
+# lendo arquivo
+text = file.read()
+print(text)
+
+# fechar o arquivo
+file.close()
+
+# método mais eficaz
+# criando e escrevendo no arquivo
+with open('teste.txt', 'w') as txt:
+  txt.write("Testando a Função")
+
+# adicionando informações ao arquivo
+with open('teste.txt', 'a') as txt:
+  txt.write('\nAcrescentando Informações')
+
+# renomeando arquivo
+os.rename('teste.txt', 'sigmoidal.txt')
+
+# verificando o arquivo editado
+os.listdir()
