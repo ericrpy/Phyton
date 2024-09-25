@@ -1,4 +1,4 @@
-# importndo os pcotes necessários
+# importando os pcotes necessários
 from google.colab import drive
 
 # montando o drive
