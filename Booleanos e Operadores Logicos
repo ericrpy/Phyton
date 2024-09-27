@@ -1,0 +1,40 @@
+# ver o tipo de True
+type(True)
+
+# ver o tipo de False
+type(False)
+
+# verificar se todas as condições são atendidas (AND)
+idade = 18
+possui_habilitacao = True
+
+# permitir aluguel de carro?
+(idade >= 18) and (possui_habilitacao)
+
+# verificar se ao menos uma condição é atendida (OR)
+tempo_relacionamento = 3
+valor_da_compra = 300.50
+cartao_da_loja = False
+
+# fornecer desconto se uma das condições for verdadeira
+(tempo_relacionamento > 1) or (valor_da_compra >= 500) or (cartao_da_loja)
+
+# verificar se a criança entra no brinquedo
+altura_crianca = 1.10
+# a criança pode entrar no brinquedo?
+not altura_crianca < 1.50
+
+2 ** 4 == 16
+
+nota_matematica = 7.0
+nota_ingles = 8.2
+nota_historia = 6.95
+
+# expressão para ver se o aluno foi aprovado
+nota_final = (nota_matematica) + (nota_ingles) + (nota_historia) / 3
+nota_final >= 7
+
+# dados do João
+idade = 19
+saldo = 1500
+idade > 18 and saldo >= 1000
