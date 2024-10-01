@@ -1,0 +1,30 @@
+# importar bibliotecas
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# importar dados para dataframe
+df = pd.read_csv("https://raw.githubusercontent.com/carlosfab/dsnp2/master/datasets/dengue-dataset.csv")
+
+# ler as 5 primeiras linhas
+df.head()
+
+# ler os tipos de cada coluna
+df.dtypes
+
+# importar dados para dataframe (df)
+df = pd.read_csv("https://raw.githubusercontent.com/carlosfab/dsnp2/master/datasets/dengue-dataset.csv")
+df["data"] = pd.to_datetime(df['data'])
+
+# ver as 5 primeiras entradas
+df.head()
+
+# criando o plot
+plt.plot('data', 'casos-confirmados', data=df)
+
+# definindo título
+plt.title("Dengue em Campinas")
+plt.ylabel("Casos Confirmados")
+plt.xlabel("Data")
+
+# mostrando gráfico
+plt.show()
