@@ -1,0 +1,25 @@
+# importar bibliotecas
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# importar dados para o dataframe
+df = pd.read_csv("https://raw.githubusercontent.com/carlosfab/dsnp2/master/datasets/entrada_passageiro_linha1.csv")
+
+# ver as 5 primeiras entradas
+df.head()
+
+# ver as 5 ultimas entradas
+df.tail()
+
+# pagar linha "TOTAL"
+df.drop(index=23, axis=0, inplace=True) # axis=0 informa que é uma linha, inplace para fazer a alteração direto no arquivo
+
+# plotar em gráfico de barras
+df.plot (x="Estação", y="Entradas", kind="bar")
+
+plt.title("Entrada Média de Passageiros - Linha 1 (Dezembro/2018)")
+plt.xlabel("Estação")
+plt.ylabel("Entradas")
+
+
+plt.show()
