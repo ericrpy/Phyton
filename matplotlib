@@ -1,0 +1,28 @@
+# importar pacotes
+import numpy as np
+import matplotlib.pyplot as plt
+
+# gerar valores demonstrativos
+np.random.seed(42)
+x = np.arange(10)
+y = np.random.normal(size=10)
+
+# plotar valores
+plt.plot(x, y);
+
+# criando o plot
+plt.plot(x, x, label="Linear")
+
+# adicionando ao plot
+plt.plot(x, x**2, label="Quadrado")
+
+# definindo titulos
+plt.title("Abordagem Pyplot")
+plt.ylabel("Valores de y")
+plt.xlabel("Valores de x")
+
+# adicionando legenda
+plt.legend()
+
+# mostrando o plot
+plt.show()
