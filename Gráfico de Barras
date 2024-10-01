@@ -20,6 +20,7 @@ df.plot (x="Estação", y="Entradas", kind="bar")
 plt.title("Entrada Média de Passageiros - Linha 1 (Dezembro/2018)")
 plt.xlabel("Estação")
 plt.ylabel("Entradas")
-
-
 plt.show()
+
+# plotar por estação
+df["Estação"].value_counts().plot(kind='bar');
