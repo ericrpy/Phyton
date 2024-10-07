@@ -1,0 +1,41 @@
+# importar bibliotecas
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# importar o arquivo csv
+df = pd.read_csv("https://raw.githubusercontent.com/carlosfab/dsnp2/master/datasets/ocorrencias_aviacao.csv")
+
+# ver as primeiras entradas
+df.head()
+
+# extrair as ocorrências para um dicionário
+df["ocorrencia_classificacao"].value_counts()
+
+# preparar dados para o pie chart
+labels = ['Incidente', 'Acidente', 'Incidente Grave']
+valores = [2861, 1714, 633]
+
+a = dict(df["ocorrencia_classificacao"].value_counts())
+
+labels = a.keys()
+valores = a.values()
+
+# criando gráfico de pizza
+plt.pie(x=valores, labels=labels)
+
+# definindo título
+plt.title("Classificação das Ocorrências")
+
+# mostrando o gráfico
+plt.show()
+
+explode = (0.1, 0.05, 0)
+
+# criando gráfico de pizza
+plt.pie(x=valores, explode=explode, labels=labels, shadow=True)
+
+# definindo título
+plt.title("Classificação das Ocorrências")
+
+# mostrando o gráfico
+plt.show()
