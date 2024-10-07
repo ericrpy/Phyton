@@ -1,0 +1,31 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from google.colab import drive
+
+# montando o drive
+drive.mount('/content/gdrive')
+
+# importar planilha do excel
+planilha = pd.read_excel('/content/gdrive/MyDrive/5.controle_da_empresa.xlsx', None)
+df = planilha['Vendas']
+
+# ver as 5 primeirasa entradas
+df.head()
+
+plt.hist('Total de Vendas', data=df) # dados estão em df
+plt.title('Histograma de Vendas')
+plt.ylabel('QUantidade de Ocorrências')
+plt.xlabel('Valor da Compra')
+plt.show()
+
+plt.hist('Total de Vendas', data=df, density=True) # Plotar em termos de frequencia relativa
+plt.title('Histograma de Vendas')
+plt.ylabel('QUantidade de Ocorrências')
+plt.xlabel('Valor da Compra')
+plt.show()
+
+plt.hist('Total de Vendas', data=df, bins=20) # Barras mais finas
+plt.title('Histograma de Vendas')
+plt.ylabel('QUantidade de Ocorrências')
+plt.xlabel('Valor da Compra')
+plt.show()
