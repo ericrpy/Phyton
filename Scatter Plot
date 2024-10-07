@@ -1,0 +1,14 @@
+# importar pacotes necessários
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# importar dataaset
+df = pd.read_csv("https://raw.githubusercontent.com/carlosfab/dsnp2/master/datasets/housing.csv")
+
+# ver as primeiras entradas
+df.head()
+
+# plotar median_income vs. median_house_value
+df.plot.scatter(x='median_income', y='median_house_value', s=.5) # s=.05 diminui as bolinhas
+
+plt.show()
