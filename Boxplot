@@ -1,0 +1,14 @@
+# importar bibliotecas
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# importar dados para o dataframe
+df = pd.read_csv('https://raw.githubusercontent.com/carlosfab/dsnp2/master/datasets/dengue-dataset.csv')
+
+# ver as 5 primeiras entradas
+df.head()
+
+# plotar o boxplot para temperaturas
+df.boxplot(['temperatura-media', 'temperatura-mininima', 'temperatura-maxima'])
+
+plt.show()
