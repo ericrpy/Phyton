@@ -1,0 +1,57 @@
+# instalar o pywaffle
+!pip install pywaffle
+
+# importar as bibliotecas necessárias
+import matplotlib.pyplot as plt
+from pywaffle import Waffle
+
+# exemplo de Waffle
+fig = plt.figure(
+                FigureClass=Waffle,
+                rows=4,
+                columns=10,
+                values={'Bolacha': 33,
+                        'Biscoito': 48,
+                        'Salgadinho': 19},
+                legend={'loc': 'upper left',
+                        'bbox_to_anchor': (1.1, 1)}
+                )
+
+fig.set_tight_layout(False)
+plt.show()
+
+# importar o pandas
+import pandas as pd
+
+# importar dados do CENIPA
+df = pd.read_csv("https://raw.githubusercontent.com/carlosfab/dsnp2/master/datasets/ocorrencias_aviacao.csv")
+
+# extrair value counts da variavel ocorrencia_classificacao
+data = dict(df["ocorrencia_classificacao"].value_counts())
+
+# plotar gráfico de waffle
+fig = plt.figure(
+                FigureClass=Waffle,
+                rows=5,
+                columns=15,
+                colors=("#232066", "#983D3D", "#DCB732"),
+                values=data, icons='plane', icon_size=12,
+                legend={'loc': 'upper left', 'bbox_to_anchor': (1,1)},
+                icon_legend=True
+                )
+fig.set_tight_layout(False)
+plt.show();
+
+# plotar homens e mulheres na sala de aula
+fig = plt.figure(
+    FigureClass=Waffle, 
+    rows=8, 
+    values={'Homens': 48, 'Mulheres': 58}, 
+    colors=("#232066", "#983D3D"),
+    legend={'loc': 'upper left', 'bbox_to_anchor': (1, 1)},
+    icons='child', icon_size=12, 
+    icon_legend=True
+)
+
+fig.set_tight_layout(False)
+plt.show();
