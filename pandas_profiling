@@ -1,0 +1,17 @@
+!pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
+
+# importar as bibliotecas necessárias
+import pandas as pd
+from pandas_profiling import ProfileReport
+
+# importar dataset
+df = pd.read_csv("https://raw.githubusercontent.com/carlosfab/dsnp2/master/datasets/ocorrencias_aviacao.csv")
+
+# criar ProfileReport
+report = ProfileReport(df)
+
+# criar visualização iframe
+report.to_notebook_iframe()
+
+# criar relatório html
+report.to_file("report.html")
