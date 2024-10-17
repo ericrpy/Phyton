@@ -1,0 +1,47 @@
+# criar uma lista
+lista_inicial = []
+print(lista_inicial)
+print(type(lista_inicial))
+
+# criar uma lista com itens
+lista_incial=["Eric",  "Rodrigues",  1.88, True]
+print(lista_incial)
+
+# acessar o elemento "Rodrigues"
+print(lista_incial[1])
+
+# acessar o penúltimo elemento
+print(lista_incial[-2])
+
+# gastos pro trimestre
+cliente =  ["Eduarda", "Estudante", 222.50,  433.880,  591.66, 124.20]
+
+# acessar as últimas quatro colunas
+cliente[2:]
+
+# criar lista de convidados
+convidados =['Ricardo', 'Aline', 'Carlos',  'Mathias', 'Elaine']
+
+# ver se Elaine está entre os convidados
+'Elaine' in convidados
+
+# confirmar se pablo não foi convidado
+'Pablo' not in convidados
+
+# alterar item da  lista
+# carteira de ações
+carteira = ['BBAAS3', 'WEGE3', 'ITSA4']
+print(carteira)
+
+# trocar ITSA4 por PETR4
+carteira[2] = 'PETR4'
+print(carteira)
+
+# adicionando ou excluindo itens da listas
+# acrescentar Luana à lista
+convidados.append('Luana')
+print(convidados)
+
+# Excluir o primeiro convidado da lista
+convidados.pop(0)
+print(convidados)
