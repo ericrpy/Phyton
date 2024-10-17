@@ -1,0 +1,63 @@
+# criando um dicionário vazio
+meu_dict = {}
+
+# verificando  o tipo
+type(meu_dict)
+
+# criando um dicionário com itens
+exemplo = {
+    'Carlos': 35,
+    "Theo": 1,
+    'Fernanda': 29
+}
+
+# verificando as chaves
+exemplo.keys()
+
+# verifanco valores
+exemplo.values()
+
+# acessando a idade de Theo
+exemplo['Theo']
+
+# adicionando itens
+exemplo['Snow'] = 6
+print(exemplo)
+
+# excluindo itens
+exemplo.pop('Snow')
+print(exemplo)
+
+# alterando itens
+exemplo['Theo'] = 2
+print(exemplo)
+
+# buscar vaalor de uma chave
+exemplo.get('Carlos')
+
+# listar todas as chaves e itens
+exemplo.items()
+
+# buscar apenas as chaves
+exemplo.keys()
+
+# buscar apenas valores
+exemplo.values()
+
+# excluir a última chave do dicionário
+exemplo.popitem()
+
+# juntar dois funcionários
+# update()
+d1={'Carlos':35, 'Theo':1, 'Fernanda':29}
+print('Dicionário 1: ',d1)
+
+d2={'Snow':6, 'Theo':2, 'Fernanda':29}
+print('Dicionário 2: ',d2)
+
+d1.update(d2)
+print('Dicionário Final: ', d1)
+
+# clear()
+exemplo.clear()
+print(exemplo)
