@@ -1,0 +1,33 @@
+# criando uma tupla
+teste = ()
+
+# verificando o tipo
+type(teste)
+
+# tentando criar uma tupla sem vírgula
+t = (2)
+type(t)
+
+# criando a tupla de uma valor com a vírgula
+t = (2,)
+type(t)
+
+# exemplos das dimensões de uma caixa
+caixa_sapato = (18,28,10)
+print(caixa_sapato)
+
+# latitude e longitude de brasília
+brasilia = (-15.77, -47.92)
+
+# associando os valores da tupla em variáveis
+lat, lon = brasilia
+
+coordenadas = {
+    "Brasilia": (15.76, 47.92),
+    "São Paulo": (-23.55, -46.63),
+    "Rio de Janeiro": (-22.90, -43.17)
+}
+
+type (coordenadas)
+
+type(coordenadas['Brasilia'])
