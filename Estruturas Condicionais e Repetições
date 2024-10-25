@@ -1,0 +1,30 @@
+# associando a idade
+eric = 33
+
+# criando a condição
+if eric >= 18:
+    print("é maior de idade")
+else:
+    print("é menor de idade")
+
+# criando variáveis
+eric_idade = 33
+eric_cnh = True
+eric_pontos_cnh = 16
+
+# criando condição
+if eric_idade >= 18 and eric_cnh and eric_pontos_cnh <  20:
+  print("Pode alugar carro")
+else:
+  print('Não pode alugar carro')
+
+# criando variáveis
+saldo = 100.00
+compra_efetuada = 25.90
+
+# criando condição
+print('saldo_inicial: ', saldo)
+
+if compra_efetuada:
+  saldo = saldo  - compra_efetuada
+  print('Saldo Final: ', saldo)
