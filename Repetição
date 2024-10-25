@@ -1,0 +1,45 @@
+# listando númerosno range 10
+for n in range(10):
+  print(n)# listando númerosno range 10
+for n in range(10):
+  print(n)
+
+import time
+for n in range(10):
+  print(n ** 2)
+  time.sleep(1)
+
+# listando convidados da lista enquanto houver convidados
+lista_convidados = ['Carlos', 'Fernanda', 'Theo', 'Snow']
+
+for a in lista_convidados:
+  print(a)
+
+# multiplicando números dentro do range
+for i in range(11):
+  resultado = i * 9
+  print('9 x', i, '=', resultado)# multiplicando números dentro do range
+for i in range(11):
+  resultado = i * 9
+  print('9 x', i, '=', resultado)
+
+# while loops
+
+saldo = 300.00
+preco_pizza = 80.50
+
+counter = 0
+while  saldo >= preco_pizza:
+  counter = counter + 1
+  saldo = saldo - preco_pizza
+
+print('Você  comprou', counter, 'pizzas')
+print('Saldo final: ', saldo)
+
+validade_yakult = 10
+
+while validade_yakult > 0:
+    print("[+] Produto na validade. Faltam", validade_yakult, "dias.")
+    validade_yakult = validade_yakult - 1
+
+print("[-] ATENÇÃO: Yogurt vencido. Faltam", validade_yakult, "dias.")
