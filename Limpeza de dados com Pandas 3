@@ -1,0 +1,19 @@
+import panda as pd
+
+# importando os dados
+df = pd.read_csv("https://www.dropbox.com/s/16nz0yikhma091u/homicidios_brasil_2017.csv?dl=1")
+
+# carregando o arquivo com o separador correto
+df = pd.read_csv("https://www.dropbox.com/s/16nz0yikhma091u/homicidios_brasil_2017.csv?dl=1", sep=";")
+
+# verificando o dataframe
+df
+
+# criando dicionário para correção
+correcao = {'G': 'GO', 'São Paulo': 'SP'}
+
+# aplicando a correção
+df['sigla'] = df['sigla'].replace(correcao)
+
+# verificando o resultado
+df
