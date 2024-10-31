@@ -1,0 +1,22 @@
+import pandas as pd
+
+# carregando os dados
+df = pd.read_excel("https://www.dropbox.com/s/69pajozeme6ezjc/solicitacoes-de-reconhecimento-da-condicao-de-refugiado.xlsx?dl=1")
+
+# visualizando as primeiras entradas
+df.head()
+
+# verificando as entradas
+df['Tipo de alertas e restrições']
+
+# aplicando captalize (primeira letra em maiúsculo)
+df['Tipo de alertas e restrições'].apply(lambda x: x.capitalize()
+
+# aplicando lower (tudo minúsculo)
+df['Tipo de alertas e restrições'].apply(lambda x: x.lower())
+
+# aplicando a função e associando à coluna
+df["Tipo de Alertas e Restrições"] = df["Tipo de Alertas e Restrições"].apply(lambda x: x.capitalize())
+
+# aplicando title a função primeira letra de cada palavra em maiúsculo
+df["Nacionalidade"] = df["Nacionalidade"].apply(lambda x: x.title())
