@@ -1,0 +1,27 @@
+# importando o pandas
+import pandas as pd
+
+# não limitar a visualização do número de colunas
+pd.set_option('display.max_columns', None)
+
+# carregando os dados
+df = pd.read_csv("http://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2020-06-19/data/listings.csv.gz")
+
+# visualizando as primeiras entradas
+df.head()
+
+# verificaando as entradas da coluna price
+df['price']
+
+# associando valor a variável
+valor = '$244.00'
+
+# limpando a variável
+valor = float(valor.replace('$', '')
+print(valor)
+
+# função lambda (uma função mais direta, que não será reutilizada)
+lambda x: float(x.repleace('$', '')) 
+
+# aplicando a função a coluna
+df['price'].apply(lambda x: float(x.replace('$', '').replace(',', '')))
