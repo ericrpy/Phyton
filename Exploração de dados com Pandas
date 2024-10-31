@@ -1,0 +1,17 @@
+# importando os pacotes necessários
+import panda as pd
+
+# carregando dados
+df = pd.read_excel("https://www.dropbox.com/s/69pajozeme6ezjc/solicitacoes-de-reconhecimento-da-condicao-de-refugiado.xlsx?dl=1")
+
+#  verificando as 5 primeiras entradas
+df.head()
+
+# ver as nacionalidades diferentes
+df["Nacionalidade"].unique()
+
+# verificando a quantidade de refugiados por país
+df["Nacionalidade"].value_counts()
+
+# ver o total de refugiados
+df["Quantidade"].sum()
