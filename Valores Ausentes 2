@@ -1,0 +1,34 @@
+# importando os dados
+import pandas as pd
+df_nyc = pd.read_csv('https://raw.githubusercontent.com/rafaelnduarte/eds_outliers/master/nyc.csv', index_col=0)
+
+# verificando as dimensões
+print('Dimensões do Dataset',
+    '\nVariáveis: ',df_nyc.shape[1], "\n"
+      'Entradas: ', df_nyc.shape[0])
+
+# verificando as primeiras entradas
+df_nyc.head()
+
+# verificando dados ausentes
+df_nyc.isnull().sum().sort_values(ascending=False)
+
+# excluindo colunas com dados faltantes
+df_nyc = df_nyc.drop(columns=['reviews_per_month', 'last_review'])
+
+# excluindo entradas com dados faltantes
+df_nyc = df_nyc.dropna(axis=0)
+
+# substituindo valores ausentes por zeros
+df_nyc = df_nyc.fillna(0)
+
+# ver valores ausentes
+df_nyc.isnull().sum()
+
+df["roubo_celular"]
+
+# média dos roubos de celular
+media_cel = df['roubo_celular'].mean()
+
+# substituindo valores ausentes com a média
+df['roubo_celular'] = df['roubo_celular'].fillna(media_cel)
