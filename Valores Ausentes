@@ -1,0 +1,17 @@
+# importando pandas
+import pandas as pd
+
+# importando os dados
+df = pd.read_csv('https://raw.githubusercontent.com/carlosfab/curso_data_science_na_pratica/master/modulo_02/violencia_rio.csv', sep=',')
+
+# verificando as primeiras entradas
+df.head()
+
+# verificando o final do dataset
+df.tail()
+
+# somando valores das colunas para ver valores ausentes
+df.isnull().sum()
+
+# agrupando valores pelo ano
+df.set_index('vano').isnull().sum(level=0) # level 0 para ser a coluna índice
