@@ -1,0 +1,19 @@
+# importando o pandas
+import pandas as pd
+
+df = pd.read_excel('https://www.dropbox.com/s/v0x8mbaygdqubli/contas_a_pagar.xlsx?dl=1')
+
+# verificando linhas duplicadas
+df.duplicated()
+
+# verificando duplicidade na coluna código de pagamento
+df.duplicated(subset='codigo_pagamento')
+
+# excluindo duplicatas
+df.drop_duplicates(subset='codigo_pagamento', inplace=True) # inplace para pegar apenas da coluna informada
+
+# verificando o resultado
+df
+
+# verificando entradas únicas
+df['codigo_pagamento'].value_counts()
