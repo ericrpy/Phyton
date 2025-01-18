@@ -9,3 +9,5 @@ os.chdir("/content/sample_data")
 
 # listar conteúdo de diretório
 os.listdir()
+
+#teste
