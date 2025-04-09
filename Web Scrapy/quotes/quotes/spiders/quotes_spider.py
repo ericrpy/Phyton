@@ -1,5 +1,10 @@
 import scrapy
 
+def clean_text(text):
+    text = text.strip(u'\u201c')
+    text = text.strip(u'\u201d')
+    return text
+
 class QuotesSpider(scrapy.Spider):
     name = "quotes"
     start_urls = [
@@ -7,6 +12,7 @@ class QuotesSpider(scrapy.Spider):
         "http://quotes.toscrape.com/page/2/"
     ]
 
+# criando uma classe no padrão
     def parse(self, response):
         for quote in response.css('div.quote'):
             text = quote.css('span.text::text').get()
@@ -23,3 +29,6 @@ class QuotesSpider(scrapy.Spider):
                 'author': author,
                 'tags': tags
             }
+        next_page = response.css("li.next a::attr(href)").get()
+        if next_page is not None: # se a página é válida
+            yield response.follow(next_page, callback=self.parse) # self por estar em um método dentro da classe, padrão, callback é o método
